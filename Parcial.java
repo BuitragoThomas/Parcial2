@@ -85,7 +85,28 @@ public class Parcial {
     }
 
     public static void main(String[] args) {
-        
+        Parcial arbol = new Parcial();
+
+       int[] datosIniciales = {55, 25, 75, 15, 35, 65, 8555, 25, 75, 15, 35, 65, 85};
+
+        for (int n : datosIniciales) {
+            arbol.insertar(n);
+        }
+
+        System.out.print("Secuencia In-Orden: ");
+        arbol.recorridoInOrden();
+
+        System.out.println("Cantidad de hojas en el árbol: " + arbol.contarHojas());
+
+        System.out.println("\nInsertando el valor 30");
+        arbol.insertar(30);
+        System.out.print("Secuencia In-Orden actualizada: ");
+        arbol.recorridoInOrden();
+
+        System.out.println("\nEliminar nodo 65");
+        arbol.eliminar(65);
+        System.out.print("Secuencia In-Orden final: ");
+        arbol.recorridoInOrden();
         
     }
 }
